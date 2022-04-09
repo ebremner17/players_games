@@ -1,0 +1,39 @@
+<?php
+
+/**
+ * Implements hook_schema().
+ */
+function dn_students_schema(){
+  $schema['waitlist'] = array(
+    'description' => 'Waitlist for players inc.',
+    'fields' => array(
+      'nid' => array(
+        'description' => 'The primary identifier for student',
+        'type' => 'int',
+        'not null' => TRUE,
+        'unsigned' => TRUE,
+      ),
+      'firstName' => array(
+        'description' => 'First name',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+      ),
+      'lastName' => array(
+        'description' => 'Last name.',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+      ),
+      'gameType' => array(
+        'description' => 'Game type.',
+        'type' => 'int',
+        'not null' => TRUE,
+      ),
+    ),
+    'primary key' => array('nid'),
+  );
+  return $schema;
+}

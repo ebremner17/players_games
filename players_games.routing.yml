@@ -1,0 +1,7 @@
+players_games.waitlist:
+  path: '/waitlist'
+  defaults:
+    _controller: '\Drupal\players_games\Controller\PlayersGames::waitlist'
+    _title: 'Players Inc. Waitlist'
+  requirements:
+    _permission: 'access content' 
